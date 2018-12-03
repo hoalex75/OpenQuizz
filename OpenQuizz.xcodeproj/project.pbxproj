@@ -13,6 +13,9 @@
 		FA87707421B57A20009584F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA87707321B57A20009584F3 /* Assets.xcassets */; };
 		FA87707721B57A20009584F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA87707521B57A20009584F3 /* LaunchScreen.storyboard */; };
 		FA87707F21B57ED0009584F3 /* Balham.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA87707E21B57ED0009584F3 /* Balham.otf */; };
+		FA87708521B58913009584F3 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87708421B58913009584F3 /* Question.swift */; };
+		FA87708721B59548009584F3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87708621B59548009584F3 /* Game.swift */; };
+		FA87708921B59C2B009584F3 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87708821B59C2B009584F3 /* QuestionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		FA87707621B57A20009584F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA87707821B57A20009584F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA87707E21B57ED0009584F3 /* Balham.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Balham.otf; sourceTree = "<group>"; };
+		FA87708421B58913009584F3 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		FA87708621B59548009584F3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		FA87708821B59C2B009584F3 /* QuestionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,9 @@
 		FA87708021B58614009584F3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA87708821B59C2B009584F3 /* QuestionManager.swift */,
+				FA87708421B58913009584F3 /* Question.swift */,
+				FA87708621B59548009584F3 /* Game.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,8 +180,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA87708521B58913009584F3 /* Question.swift in Sources */,
 				FA87706F21B57A1E009584F3 /* ViewController.swift in Sources */,
 				FA87706D21B57A1E009584F3 /* AppDelegate.swift in Sources */,
+				FA87708921B59C2B009584F3 /* QuestionManager.swift in Sources */,
+				FA87708721B59548009584F3 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
