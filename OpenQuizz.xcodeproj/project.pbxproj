@@ -12,6 +12,7 @@
 		FA87707221B57A1E009584F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA87707021B57A1E009584F3 /* Main.storyboard */; };
 		FA87707421B57A20009584F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA87707321B57A20009584F3 /* Assets.xcassets */; };
 		FA87707721B57A20009584F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA87707521B57A20009584F3 /* LaunchScreen.storyboard */; };
+		FA87707F21B57ED0009584F3 /* Balham.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA87707E21B57ED0009584F3 /* Balham.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FA87707321B57A20009584F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA87707621B57A20009584F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA87707821B57A20009584F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA87707E21B57ED0009584F3 /* Balham.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Balham.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,47 @@
 		FA87706B21B57A1E009584F3 /* OpenQuizz */ = {
 			isa = PBXGroup;
 			children = (
-				FA87706C21B57A1E009584F3 /* AppDelegate.swift */,
-				FA87706E21B57A1E009584F3 /* ViewController.swift */,
-				FA87707021B57A1E009584F3 /* Main.storyboard */,
-				FA87707321B57A20009584F3 /* Assets.xcassets */,
-				FA87707521B57A20009584F3 /* LaunchScreen.storyboard */,
-				FA87707821B57A20009584F3 /* Info.plist */,
+				FA87708321B5863B009584F3 /* Supporting files */,
+				FA87708021B58614009584F3 /* Model */,
+				FA87708221B5862C009584F3 /* Controller */,
+				FA87708121B5861E009584F3 /* View */,
 			);
 			path = OpenQuizz;
+			sourceTree = "<group>";
+		};
+		FA87708021B58614009584F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA87708121B5861E009584F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA87707021B57A1E009584F3 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA87708221B5862C009584F3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA87706E21B57A1E009584F3 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA87708321B5863B009584F3 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				FA87707321B57A20009584F3 /* Assets.xcassets */,
+				FA87707E21B57ED0009584F3 /* Balham.otf */,
+				FA87707521B57A20009584F3 /* LaunchScreen.storyboard */,
+				FA87707821B57A20009584F3 /* Info.plist */,
+				FA87706C21B57A1E009584F3 /* AppDelegate.swift */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +159,7 @@
 			files = (
 				FA87707721B57A20009584F3 /* LaunchScreen.storyboard in Resources */,
 				FA87707421B57A20009584F3 /* Assets.xcassets in Resources */,
+				FA87707F21B57ED0009584F3 /* Balham.otf in Resources */,
 				FA87707221B57A1E009584F3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,7 +319,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = OpenQuizz/Info.plist;
+				DEVELOPMENT_TEAM = 529LRG4ZS2;
+				INFOPLIST_FILE = "$(SRCROOT)/OpenQuizz/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +337,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = OpenQuizz/Info.plist;
+				DEVELOPMENT_TEAM = 529LRG4ZS2;
+				INFOPLIST_FILE = "$(SRCROOT)/OpenQuizz/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
