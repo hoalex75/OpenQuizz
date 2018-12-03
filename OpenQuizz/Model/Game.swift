@@ -46,6 +46,7 @@ class Game {
         goToNextQuestion()
     }
     
+    
     private func goToNextQuestion() {
         if currentIndex < questions.count - 1 {
             currentIndex += 1
