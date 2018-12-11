@@ -68,6 +68,13 @@
                                     <outlet property="label" destination="aNF-ZO-nbZ" id="UKx-r3-fqN"/>
                                 </connections>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question : 10/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJ2-jy-ui1">
+                                <rect key="frame" x="62.203358208951158" y="370" width="250" height="28.999999999999986"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="29"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.34301638600000001" green="0.41838744280000001" blue="0.50981330869999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -75,6 +82,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="ITo-Yu-KlX" id="Ewe-9L-dey"/>
                         <outlet property="button" destination="cLs-b1-7bw" id="dyY-X3-gg5"/>
+                        <outlet property="cptQuestion" destination="jJ2-jy-ui1" id="DET-CZ-WXs"/>
                         <outlet property="questionView" destination="2lS-pz-fIt" id="hEI-Ko-s9a"/>
                         <outlet property="score" destination="eBy-8i-nQO" id="upY-R4-auR"/>
                     </connections>

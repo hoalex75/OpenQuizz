@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var score: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var cptQuestion: UILabel!
+    
+    
     var game = Game()
     
     override func viewDidLoad() {
@@ -25,6 +28,7 @@ class ViewController: UIViewController {
         
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(dragQuestionView(_:)))
         questionView.addGestureRecognizer(panGestureRecognizer)
+        
     }
     
     @objc private func questionsLoaded(){
@@ -44,7 +48,9 @@ class ViewController: UIViewController {
         questionView.style = .standard
         questionView.title = "Loading..."
         score.text = "0 / 10"
+        cptQuestion.text = "Question 1 / 10"
         game.refresh()
+        cptQuestion.isHidden = false
     }
     
     @objc func dragQuestionView(_ sender: UIPanGestureRecognizer){
@@ -115,16 +121,46 @@ class ViewController: UIViewController {
         questionView.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
         questionView.style = .standard
         
-        switch game.state {
-        case .ongoing:
-            questionView.title = game.currentQuestion.title
-        default:
-            questionView.title = "Game Over"
-        }
-        
         UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
             self.questionView.transform = .identity
         }, completion: nil)
+        
+        switch game.state {
+        case .ongoing:
+            cptQuestion.text = "Question : \(game.currentIndex+1) / 10"
+            questionView.title = game.currentQuestion.title
+        default:
+            cptQuestion.isHidden = true
+            questionView.title = "Game Over"
+            let translateLeft = CGAffineTransform(translationX: -150, y: 0)
+            let translateDown = CGAffineTransform(translationX: 0, y: 150)
+            let translateRight = CGAffineTransform(translationX: 150, y: 0)
+            
+            UIView.animate(withDuration: 1.0, animations: {
+                self.questionView.transform = translateLeft
+            }) { (success) in
+                if success {
+                    UIView.animate(withDuration: 1.0, animations: {
+                        self.questionView.transform = translateDown
+                    }, completion: { (success) in
+                        if success {
+                            UIView.animate(withDuration: 1.0, animations: {
+                                self.questionView.transform = translateRight
+                            }, completion: { (_) in
+                                UIView.animate(withDuration: 1.0, animations: {
+                                    self.questionView.transform = .identity
+                                })
+                            })
+                        }
+                    })
+                }
+            }
+        
+        }
+        
+        
+       
+        
     }
 }
 

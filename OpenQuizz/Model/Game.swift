@@ -12,7 +12,7 @@ class Game {
     var score = 0
     
     private var questions = [Question]()
-    private var currentIndex = 0
+    var currentIndex = 0
     
     var state: State = .ongoing
     
