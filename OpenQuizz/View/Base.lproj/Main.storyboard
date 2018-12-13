@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,11 +20,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenQuizz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLs-b1-7bw">
-                                <rect key="frame" x="87.5" y="567" width="200" height="80"/>
+                                <rect key="frame" x="459" y="230" width="200" height="80"/>
                                 <color key="backgroundColor" red="0.36705443259999998" green="0.55343973639999999" blue="0.78433835510000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="RnB-lU-tm9"/>
@@ -38,11 +38,8 @@
                                     <action selector="didTapNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="uEg-v2-gn1"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ITo-Yu-KlX">
-                                <rect key="frame" x="169" y="588.5" width="37" height="37"/>
-                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBy-8i-nQO">
-                                <rect key="frame" x="37.5" y="281" width="300" height="60"/>
+                                <rect key="frame" x="459" y="65" width="200" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="tCJ-sv-E9k"/>
                                     <constraint firstAttribute="width" secondItem="eBy-8i-nQO" secondAttribute="height" multiplier="5:1" id="uJQ-5u-UII"/>
@@ -50,9 +47,14 @@
                                 <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="uJQ-5u-UII"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lS-pz-fIt" customClass="QuestionView" customModule="OpenQuizz" customModuleProvider="target">
-                                <rect key="frame" x="65" y="28" width="245" height="245"/>
+                                <rect key="frame" x="8" y="65" width="245" height="245"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNF-ZO-nbZ">
                                         <rect key="frame" x="8" y="8" width="229" height="229"/>
@@ -75,40 +77,97 @@
                                     <constraint firstAttribute="trailing" secondItem="aNF-ZO-nbZ" secondAttribute="trailing" constant="8" id="Ydb-io-1mH"/>
                                     <constraint firstItem="aNF-ZO-nbZ" firstAttribute="top" secondItem="2lS-pz-fIt" secondAttribute="top" constant="8" id="a4Y-Mb-Y1w"/>
                                     <constraint firstAttribute="width" secondItem="2lS-pz-fIt" secondAttribute="height" multiplier="1:1" id="c3A-ha-tVX"/>
+                                    <constraint firstItem="aNF-ZO-nbZ" firstAttribute="centerY" secondItem="2lS-pz-fIt" secondAttribute="centerY" id="gCv-5G-hy4"/>
                                     <constraint firstItem="Bkb-Cp-n8v" firstAttribute="centerX" secondItem="2lS-pz-fIt" secondAttribute="centerX" id="i9p-9g-lL1"/>
                                     <constraint firstAttribute="bottom" secondItem="Bkb-Cp-n8v" secondAttribute="bottom" constant="8" id="mnZ-d8-aU7"/>
                                     <constraint firstItem="aNF-ZO-nbZ" firstAttribute="leading" secondItem="2lS-pz-fIt" secondAttribute="leading" constant="8" id="oso-h0-NU0"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gCv-5G-hy4"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="gCv-5G-hy4"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="icon" destination="Bkb-Cp-n8v" id="csa-o5-fbx"/>
                                     <outlet property="label" destination="aNF-ZO-nbZ" id="UKx-r3-fqN"/>
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question : 10/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJ2-jy-ui1">
-                                <rect key="frame" x="58" y="361" width="259" height="30"/>
+                                <rect key="frame" x="429.5" y="172.5" width="259" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1gg-8X-kFs"/>
                                     <constraint firstAttribute="width" secondItem="jJ2-jy-ui1" secondAttribute="height" multiplier="250:29" id="c3L-JA-0gH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="29"/>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ITo-Yu-KlX">
+                                <rect key="frame" x="540.5" y="251.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.34301638600000001" green="0.41838744280000001" blue="0.50981330869999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="jJ2-jy-ui1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1gy-aG-jG9"/>
+                            <constraint firstItem="cLs-b1-7bw" firstAttribute="width" secondItem="eBy-8i-nQO" secondAttribute="width" id="9Da-1y-OUa"/>
                             <constraint firstItem="cLs-b1-7bw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DUi-26-a10"/>
                             <constraint firstItem="ITo-Yu-KlX" firstAttribute="centerY" secondItem="cLs-b1-7bw" secondAttribute="centerY" id="J58-0a-mXq"/>
+                            <constraint firstItem="eBy-8i-nQO" firstAttribute="top" secondItem="2lS-pz-fIt" secondAttribute="top" id="KcO-ft-Q6h"/>
                             <constraint firstItem="eBy-8i-nQO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S8v-MA-eJJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cLs-b1-7bw" secondAttribute="bottom" constant="20" id="SIZ-qI-32z"/>
+                            <constraint firstItem="jJ2-jy-ui1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SiZ-49-REt"/>
                             <constraint firstItem="eBy-8i-nQO" firstAttribute="top" secondItem="2lS-pz-fIt" secondAttribute="bottom" constant="8" id="X40-hV-BJj"/>
                             <constraint firstItem="2lS-pz-fIt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="XXR-zl-lU5"/>
                             <constraint firstItem="ITo-Yu-KlX" firstAttribute="centerX" secondItem="cLs-b1-7bw" secondAttribute="centerX" id="afp-ox-QiT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eBy-8i-nQO" secondAttribute="trailing" constant="8" id="bWj-n0-zTg"/>
                             <constraint firstItem="jJ2-jy-ui1" firstAttribute="top" secondItem="eBy-8i-nQO" secondAttribute="bottom" constant="20" id="chy-xu-Zpf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cLs-b1-7bw" secondAttribute="trailing" constant="8" id="eP6-xb-rBd"/>
+                            <constraint firstItem="cLs-b1-7bw" firstAttribute="bottom" secondItem="2lS-pz-fIt" secondAttribute="bottom" id="fW8-4T-yjT"/>
+                            <constraint firstItem="2lS-pz-fIt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="itf-1q-4BW"/>
+                            <constraint firstItem="2lS-pz-fIt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="m30-2S-Vej"/>
                             <constraint firstItem="2lS-pz-fIt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n4B-UF-xZ7"/>
+                            <constraint firstItem="cLs-b1-7bw" firstAttribute="centerX" secondItem="jJ2-jy-ui1" secondAttribute="centerX" id="rvN-8Y-3ei"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bWj-n0-zTg"/>
+                                <exclude reference="eP6-xb-rBd"/>
+                                <exclude reference="itf-1q-4BW"/>
+                                <exclude reference="m30-2S-Vej"/>
+                                <exclude reference="SiZ-49-REt"/>
+                                <exclude reference="KcO-ft-Q6h"/>
+                                <exclude reference="9Da-1y-OUa"/>
+                                <exclude reference="fW8-4T-yjT"/>
+                                <exclude reference="rvN-8Y-3ei"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="SIZ-qI-32z"/>
+                                <include reference="bWj-n0-zTg"/>
+                                <include reference="eP6-xb-rBd"/>
+                                <exclude reference="XXR-zl-lU5"/>
+                                <include reference="itf-1q-4BW"/>
+                                <include reference="m30-2S-Vej"/>
+                                <exclude reference="n4B-UF-xZ7"/>
+                                <exclude reference="1gy-aG-jG9"/>
+                                <include reference="SiZ-49-REt"/>
+                                <exclude reference="chy-xu-Zpf"/>
+                                <include reference="KcO-ft-Q6h"/>
+                                <exclude reference="S8v-MA-eJJ"/>
+                                <exclude reference="X40-hV-BJj"/>
+                                <include reference="9Da-1y-OUa"/>
+                                <exclude reference="DUi-26-a10"/>
+                                <include reference="fW8-4T-yjT"/>
+                                <include reference="rvN-8Y-3ei"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="ITo-Yu-KlX" id="Ewe-9L-dey"/>
