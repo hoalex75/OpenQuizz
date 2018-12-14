@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,27 +9,83 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Balham.otf">
+            <string>Balham</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="lx1-Zj-cpX">
-                                <rect key="frame" x="67" y="188" width="241" height="290"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="lx1-Zj-cpX">
+                                <rect key="frame" x="346" y="483" width="332" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="I2J-AG-8Mh"/>
+                                    <constraint firstAttribute="width" secondItem="lx1-Zj-cpX" secondAttribute="height" multiplier="241:290" id="ZZO-ci-7VE"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="I2J-AG-8Mh"/>
+                                        <exclude reference="ZZO-ci-7VE"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="I2J-AG-8Mh"/>
+                                        <include reference="ZZO-ci-7VE"/>
+                                    </mask>
+                                </variation>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ipad Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hkf-3O-25v">
+                                <rect key="frame" x="346.5" y="946" width="331" height="59"/>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.34301638600000001" green="0.41838744280000001" blue="0.50981330869999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Hkf-3O-25v" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="5Nr-ZE-q5k"/>
+                            <constraint firstItem="Hkf-3O-25v" firstAttribute="top" secondItem="lx1-Zj-cpX" secondAttribute="bottom" constant="63" id="F6R-Qw-RPj"/>
+                            <constraint firstItem="lx1-Zj-cpX" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="eMk-sL-lut"/>
+                            <constraint firstItem="lx1-Zj-cpX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="kBK-Mq-aqb"/>
+                            <constraint firstItem="lx1-Zj-cpX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="m6F-cI-1SJ"/>
+                            <constraint firstItem="lx1-Zj-cpX" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="wMg-vY-sF0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Hkf-3O-25v"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="kBK-Mq-aqb"/>
+                                <exclude reference="wMg-vY-sF0"/>
+                                <exclude reference="5Nr-ZE-q5k"/>
+                                <exclude reference="F6R-Qw-RPj"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="Hkf-3O-25v"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="kBK-Mq-aqb"/>
+                                <include reference="wMg-vY-sF0"/>
+                                <include reference="5Nr-ZE-q5k"/>
+                                <include reference="F6R-Qw-RPj"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.34375" y="375"/>
         </scene>
     </scenes>
     <resources>
